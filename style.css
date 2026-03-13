@@ -703,7 +703,6 @@ header.home {
 
 .services {
   display: flex;
-  flex-wrap: wrap;
 }
 
 #Coding .services {
@@ -772,6 +771,7 @@ header.home {
 @media screen and (max-width: 768px) {
   .services {
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .service {
