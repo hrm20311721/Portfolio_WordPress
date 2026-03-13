@@ -45,7 +45,7 @@ img {
 main {
   position: relative;
   z-index: 5;
-  background: url('/wp-content/themes/hrm20311721/assets/img/background@2x.png') center 700px / cover;
+  background: url('/wp-content/themes/Portfolio_WordPress/assets/img/background@2x.png') center 700px / cover;
   overflow: hidden;
   min-height: calc(100vh - 315px);
 }
@@ -1329,24 +1329,17 @@ figcaption {
 /***** portfolio page *****/
 
 main.portfolio {
-  background: top left / cover url(/wp-content/themes/hrm20311721/assets/img/fv@2x.png);
-  filter: blur();
-  position: fixed;
-  height: calc(100vh - 380px);
-  top: 0;
-  left: 0;
-  width: 100%;
+  --bg: url(/wp-content/themes/Portfolio_WordPress/assets/img/fv@2x.png);
+  background: top left / cover var(--bg);
+  position: relative;
 }
 
 main.portfolio::before {
   content: '';
-  background: inherit;
+  background: top left / cover var(--bg);
   filter: blur(10px);
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  inset: -10px;
   z-index: -10;
 }
 
