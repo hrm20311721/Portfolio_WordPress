@@ -5,10 +5,10 @@
 	<div class="parallax">
 		<!--↓ fv ↓-->
 		<div class="fv">
-			<img src="/wp-content/themes/hrm20311721/assets/img/fv@2x.png" alt="">
+			<img src="<?php echo get_template_directory_uri(). '/assets/img/fv@2x.png'; ?>" alt="">
 			<section id="fv">
 				<div class="logo col2">
-					<img src="/wp-content/themes/hrm20311721/assets/img/LOGO_hy_p-10.png" alt="">
+					<img src="<?php echo get_template_directory_uri(). '/assets/img/LOGO_hy_p-10.png'; ?>" alt="">
 				</div>
 				<!--↓ TOP・PCメニュー ↓-->
 				<ul class="fv-nav col2">
@@ -218,7 +218,7 @@
 		</div>
 		<section id="contact">
 			<div class="icon col2">
-				<img src="/wp-content/themes/hrm20311721/assets/img/LOGO_hy_p-08.png" alt="">
+				<img src="<?php echo get_template_directory_uri(). '/assets/img/LOGO_hy_p-08.png'; ?>" alt="">
 			</div>
 			<div class="buttons col2">
 				<p>ご相談だけでもお伺いいたします。<br>お気軽にお問い合わせください</p>
