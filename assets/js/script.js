@@ -24,7 +24,7 @@
     dots: true,
     centerMode: true,
     centerPadding: '0px',
-    variableWidth: true,
+    variableWidth: false,
     responsive: [
       {
         breakpoint: 768,

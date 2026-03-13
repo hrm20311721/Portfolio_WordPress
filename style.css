@@ -1723,7 +1723,7 @@ main.portfolio::before {
     min-width: calc((40vh + 65px) / 3);
   }
 
-  .wpcf7-form .form-label{
+  .wpcf7-form .form-label {
     font-size: 1.5rem;
   }
 
