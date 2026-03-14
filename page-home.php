@@ -21,9 +21,9 @@
 					<li class="nav-item">
 						<a href="<?php echo get_post_type_archive_link('works'); ?>">WORKS</a>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a href="<?php echo get_page_link(111); ?>">BLOG</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
 						<a href="<?php echo get_page_link(117); ?>">CONTACT</a>
 					</li>

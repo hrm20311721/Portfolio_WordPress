@@ -9,7 +9,7 @@
               <dt>ABOUT</dt>
               <dd><a href="<?php echo get_page_link(9); ?>">Profile</a></dd>
               <dd><a href="<?php echo get_post_type_archive_link('works'); ?>">Portfolio</a></dd>
-              <dd><a href="<?php echo get_page_link(111); ?>">Blog</a></dd>
+              <!-- <dd><a href="<?php echo get_page_link(111); ?>">Blog</a></dd> -->
             </dl>
           </div>
           <div class="footer-col">

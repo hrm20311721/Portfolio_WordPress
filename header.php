@@ -22,9 +22,9 @@
           </li>
           <li class="header-item"><a href="<?php echo get_post_type_archive_link('works'); ?>">WORKS</a>
           </li>
-          <li class="header-item">
+          <!-- <li class="header-item">
             <a href="<?php echo get_page_link(111); ?>">BLOG</a>
-          </li>
+          </li> -->
           <li class="header-item">
             <a href="<?php echo get_page_link(117); ?>">CONTACT</a>
           </li>
