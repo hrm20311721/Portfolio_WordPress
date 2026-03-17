@@ -271,6 +271,10 @@ section {
     font-size: 1.2rem;
   }
 
+  .fs18 {
+    font-size: 1.6rem;
+  }
+
   .page-fv-lead {
     font-size: 1.8rem;
   }
@@ -337,10 +341,8 @@ header.home {
 }
 
 
-/* ===== SPメニュー（フルスクリーン） ===== */
 @media screen and (max-width: 768px) {
 
-  /* 初期状態は非表示 */
   .header-menu {
     position: fixed;
     top: 0;
@@ -359,7 +361,6 @@ header.home {
     -webkit-backdrop-filter: blur(8px);
   }
 
-  /* 表示状態 */
   .header-menu.active {
     display: flex;
     flex-direction: column;
@@ -370,7 +371,6 @@ header.home {
     transform: translateY(0);
   }
 
-  /* メニューの文字 */
   .header-list {
     flex-direction: column;
     gap: 25px;
@@ -381,7 +381,6 @@ header.home {
     margin-right: 0;
   }
 
-  /* ハンバーガー表示 */
   .menu-button {
     display: block;
     margin-left: auto;
@@ -422,7 +421,6 @@ header.home {
     top: 10px;
   }
 
-  /* 開いたときのアニメーション */
   .menu-button.active span {
     background: transparent;
   }
@@ -437,7 +435,6 @@ header.home {
     transform: rotate(-45deg);
   }
 
-  /* メニュー項目の初期状態 */
   .header-list .header-item {
     opacity: 0;
     transform: translateY(10px);
@@ -447,7 +444,6 @@ header.home {
     animation: fadeUp 0.4s ease-out forwards;
   }
 
-  /* active時にアニメーションを順番に適用 */
   .header-menu.active .header-item:nth-child(1) {
     animation-delay: 0.1s;
   }
@@ -468,7 +464,6 @@ header.home {
     animation-delay: 0.5s;
   }
 
-  /* ふわっと上に上がるアニメーション */
   @keyframes fadeUp {
     0% {
       opacity: 0;
@@ -718,7 +713,7 @@ header.home {
   position: relative;
 }
 
-.service:not(.slick-slide):nth-child(-n+3) {
+.service:not(.slick-slide):nth-child(-n + 3) {
   margin-right: 20px;
 }
 
@@ -1361,6 +1356,7 @@ main.portfolio::before {
   display: flex;
   align-items: center;
   margin: 0 0 0 20px;
+  position: relative;
 }
 
 .nav-item.active::before {
@@ -1369,7 +1365,7 @@ main.portfolio::before {
   font-weight: 900;
   font-size: 1.6rem;
   position: absolute;
-  left: 0px;
+  left: -1.6rem;
 }
 
 .nav-list {
@@ -1496,6 +1492,56 @@ main.portfolio::before {
   }
 }
 
+@media screen and (max-width:768px) {
+  .portfolio section {
+    flex-direction: column;
+  }
+
+  .works-nav {
+    width: 100%;
+  }
+
+  .works-nav h2 {
+    margin-bottom: 20px;
+  }
+
+  .works-nav .nav-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .works-block {
+    width: 100%;
+  }
+
+  .work-item {
+    width: 50%;
+  }
+
+  .work-item a .description {
+    opacity: 1;
+    left: calc(100% + 5px);
+    background: none;
+    text-align: left;
+    align-items: start;
+  }
+
+  .work-item .description p {
+    margin: 0;
+  }
+
+  .work-item .description p.work-title {
+    margin: 0;
+    margin-top: 5%;
+  }
+
+  .work-item .description .tag_list {
+    margin-top: auto;
+    margin-bottom: 5%;
+    justify-content: start;
+  }
+}
+
 /***** End portfolio page *****/
 
 /***** single-work *****/
@@ -1544,6 +1590,55 @@ main.portfolio::before {
 
 .wp-block-group.gallary .wp-block-group__inner-container figure {
   width: 25%;
+}
+
+.portfolio_img_gallary {
+  display: flex;
+}
+
+.portfolio_gallary_img {
+  aspect-ratio: 1 / 1;
+}
+
+.portfolio_gallary_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio_gallary_img:not(.slick-slide):nth-child(-n + 3) {
+  margin-right: 20px;
+}
+
+.portfolio_gallary_img.slick-slide {
+  margin: 0 10px;
+}
+
+.portfolio_img_gallary.slick4 .slick-list {
+  margin: 0 -10px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio_img_gallary {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .portfolio_gallary_img.col4 {
+    width: calc(50% - 10px);
+  }
+
+  .portfolio_gallary_img:not(.slick-slide):nth-child(-n + 3) {
+    margin: 0;
+  }
+
+  .portfolio_gallary_img.slick-slide {
+    margin: 0 5px;
+  }
+
+  .portfolio_img_gallary.slick4 .slick-list {
+    margin: 0 -5px;
+  }
+
 }
 
 /***** End single-work *****/

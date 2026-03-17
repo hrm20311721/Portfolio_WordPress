@@ -37,6 +37,63 @@
   });
 
   //-----------------------
+  //ポートフォリオ用スライダー
+  //-----------------------
+  $portfolio_gallary = $('.portfolio_img_gallary');
+  $c = $portfolio_gallary.children('.portfolio_gallary_img').length;
+  console.log($c)
+  if ($c > 4) {
+    $portfolio_gallary.addClass('slick4')
+  }
+  if ($c > 2) {
+    $portfolio_gallary.addClass('slick2')
+  }
+
+  $('.portfolio_img_gallary.slick4').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    centerPadding: '0px',
+    variableWidth: false,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: false,
+        }
+      }
+    ]
+  })
+
+  $('.portfolio_img_gallary.slick2').slick({
+    dots: false,
+    infinite: false,
+    variableWidth: false,
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          dots: true,
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 770,
+        settings: "unslick"
+      }
+    ]
+  })
+
+  //-----------------------
   //ヘッダー表示
   //-----------------------
   $(document).on('load scroll', function (e) {

@@ -43,7 +43,18 @@
     </div>
     <p class="fs16">ギャラリー</p>
     <div class="content">
-      <?php the_content(); ?>
+      <div class="portfolio_img_gallary">
+        <?php
+        for ($i = 1; $i <= 8; $i++):
+          $image = get_field('gallary_img' . $i);
+          if ($image):
+            $url = $image['url']; ?>
+            <div class="portfolio_gallary_img col4">
+              <img src="<?= $url ?>" alt="" class="">
+            </div>
+        <?php endif;
+        endfor; ?>
+      </div>
     </div>
 
   </section>
