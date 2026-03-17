@@ -3,13 +3,17 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="<?php bloginfo('html_type'); ?>" charset="<?php bloginfo('charset'); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/eef91d5f84.js" crossorigin="anonymous"></script>
   <?php wp_head(); ?>
 </head>
 
 <body>
-  <header class="<?php if(is_front_page()): echo 'home'; endif; ?>">
+  <header class="<?php if (is_front_page()): echo 'home';
+                  endif; ?>">
     <div class="header-inner fs16">
       <h2 class="header-logo"><a href="/"><img src="<?php echo get_template_directory_uri() . '/assets/img/LOGO_hy_p-06.png'; ?>" alt=""></a></h2>
       <div class="header-menu">
