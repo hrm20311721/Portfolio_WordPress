@@ -1553,17 +1553,13 @@ main.portfolio::before {
 
 .work-thumb {
   position: relative;
-}
-
-.work-thumb::before {
-  content: "";
-  padding-top: 100%;
-  display: block;
+  aspect-ratio: 1/1;
 }
 
 .work-thumb img {
   position: absolute;
   top: 0;
+  height: 100%;
 }
 
 .single-works .details {
@@ -1637,6 +1633,22 @@ main.portfolio::before {
 
   .portfolio_img_gallary.slick4 .slick-list {
     margin: 0 -5px;
+  }
+
+  .work-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .work-thumb {
+
+    width: 100%;
+  }
+
+  .single-works .details {
+    width: 100%;
+    padding: 0;
   }
 
 }
