@@ -23,7 +23,7 @@
             <dl>
               <dt>SERVICE</dt>
               <?php foreach ($genres as $genre) : ?>
-                <dd class="fs16"><a href="<?php echo get_term_link($genre); ?> "><?php echo $genre->name; ?></a></dd>
+                <dd><a href="<?php echo get_term_link($genre); ?> "><?php echo $genre->name; ?></a></dd>
               <?php endforeach; ?>
             </dl>
           </div>
